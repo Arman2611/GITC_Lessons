@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Web page layout systems</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<hr>
+
+	<h1>Standart page layout with blocks</h1>
+	<div id="flag">
+		<div class="single-height red"></div>
+		<div class="single-height blue"></div>
+		<div class="single-height orange"></div>
+	</div>
+	<hr>
+
+	<h1>Page layout with inline-blocks</h1>
+	<div class="container inline-container">
+		<div class="half-height full-width purple"></div>
+		<div class="single-height double-width red"></div>
+		<div class="single-height single-width light-yellow"></div>
+		<div class="double-height double-width">
+			<div class="double-height single-width">
+				<div class="single-height single-width black"></div>
+				<div class="single-height single-width yellow"></div>
+			</div>			
+			<div class="double-height single-width light-blue"></div>			
+		</div>
+		<div class="double-height single-width">
+			<div class="single-height single-width bordo"></div>
+			<div class="single-height single-width light-purple"></div>
+		</div>
+	</div>
+	<hr>
+
+	<h1>Page layout with floats</h1>
+	<div class="container">
+		<div class="float-container">
+			<div class="half-height full-width purple"></div>
+			<div class="single-height double-width red"></div>
+			<div class="single-height single-width light-yellow"></div>
+			<div class="double-height double-width">
+				<div class="double-height single-width">
+					<div class="single-height single-width black"></div>
+					<div class="single-height single-width yellow"></div>
+				</div>			
+				<div class="double-height single-width light-blue"></div>			
+			</div>
+			<div class="double-height single-width">
+				<div class="single-height single-width bordo"></div>
+				<div class="single-height single-width light-purple"></div>
+			</div>
+		</div>		
+	</div>
+	<hr>
+
+	<h1>Page layout with Flexboxes</h1>
+	<div class="container flex-container">
+		<div class="half-height full-width purple"></div>
+		<div class="single-height double-width red"></div>
+		<div class="single-height single-width light-yellow"></div>
+		<div id="lower-flexbox">
+			<div class="double-height single-width">
+				<div class="double-height single-width">
+					<div class="single-height single-width black"></div>
+					<div class="single-height single-width yellow"></div>
+				</div>			
+			</div>			
+			<div class="double-height single-width light-blue"></div>
+			<div class="double-height single-width">
+				<div class="single-height single-width bordo"></div>
+				<div class="single-height single-width light-purple"></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+
+	<h1>Page layout with Tables</h1>
+	<table class="container table-container">
+		<tr>
+			<td colspan="3" class="half-height full-width purple"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="single-height double-width red"></td>
+			<td class="single-height single-width light-yellow"></td>
+		</tr>
+		<tr>
+			<td class="single-height single-width black"></td>
+			<td rowspan="2" class="single-height single-width light-blue"></td>
+			<td class="single-height single-width bordo"></td>
+		</tr>
+		<tr>
+			<td class="single-height single-width yellow"></td>
+			<td class="single-height single-width light-purple"></td>
+		</tr>
+	</table>
+	<hr>
+
+	<h1>Page layout with Grid</h1>
+	<div class="container grid-container">
+		<div class="purple box1"></div>
+		<div class="red box2"></div>
+		<div class="light-yellow box3"></div>
+		<div class="black box4"></div>
+		<div class="yellow box5"></div>
+		<div class="light-blue box6"></div>
+		<div class="bordo box7"></div>
+		<div class="light-purple box8"></div>
+	</div>
+	<hr>
+	
+</body>
+</html>
