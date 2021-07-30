@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Black & White</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script>
+		// For transition bug in Chrome
+	</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -13,13 +16,28 @@
 				<a href="index.html" class="logo-text"><span class="logo-white">black</span>&white</a href="#">
 				<h3 class="logo-info">Black & White Website Template.</h3>
 			</div>
-			<nav>
+			<nav class="desktop-nav">
 				<a href="index.html">Home</a>
 				<a href="#">Examples</a>
 				<a href="a_page.html">A page</a>
 				<a href="#">Another page</a>
 				<a href="contact_page.html" class="menu-active">Contact us</a>
 			</nav>
+			<div class="mobile-menu">
+				<input type="checkbox" id="hidden-checkbox">
+				<label class="menu-icon flex-centered" for="hidden-checkbox" title="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<nav class="mobile-nav">
+					<a href="index.html">Home</a>
+					<a href="#">Examples</a>
+					<a href="a_page.html">A page</a>
+					<a href="#">Another page</a>
+					<a href="contact_page.html" class="menu-active">Contact us</a>
+				</nav>
+			</div>
 		</header>
 		<main>
 			<section class="main-content form-container">
