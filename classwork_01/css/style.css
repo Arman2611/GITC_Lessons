@@ -1,0 +1,261 @@
+
+/* ------------------ Global Styles ------------------ */
+
+* {
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	list-style:none;
+	text-decoration:none;
+	font-family: 'Raleway', sans-serif;
+}
+*:focus {
+	outline: 1px solid grey;
+}
+.flex-centered {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+a {	
+	color: #bbb;
+	user-select: none;
+	text-transform: uppercase;
+}
+.btn-purple {
+	color: #bbb;
+	background-color: #5E3875;
+	user-select: none;
+	text-transform: uppercase;
+	padding: 12px 34px;
+	border-radius: 30px;
+	font-size: 19px;
+	min-height: 45px;
+}
+.btn-purple:hover {
+	background-color: #3A0A69;
+}
+
+body {
+	margin: 0 auto;
+	color: #ccc;
+}
+.container {
+	width: 1600px;
+	max-width: 1600px;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+
+/* ------------------ Header Styling ------------------ */
+
+header {
+	position: relative;
+}
+.banner-image {
+	margin-top: -128px;
+}
+.header-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.header-top {
+	background: rgba(0,0,0,0.55);
+	display: flex;
+	justify-content: space-between;	
+	padding: 31px 100px 16px;
+	font-size: 14px;
+}
+
+.header-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	color: #bbb;
+}
+.header-row {
+	display: flex;
+	justify-content: flex-end;
+	margin: 8px 0;
+}
+
+.search-box {
+	display: flex;
+	align-items: stretch;
+	min-height: 45px;
+	margin: 0 0 0 12px;
+	border-radius: 32px;
+	overflow: hidden;
+	outline: none;
+	background: #686667;
+}
+.search-box input {
+	width: 120px;
+	background-color: #686667;
+	padding: 0 14px;
+	color: #ccc;
+	font-size: 19px;
+	background-color: #686667;
+	outline: none;
+	border: none;
+}
+.search-box input::placeholder {
+	text-transform: uppercase;
+	color: #ccc;
+}
+.search-icon {
+	margin: 8px 8px;
+	padding: 0px 8px;
+	border-left: 1px solid #cccccc;
+}
+.search-icon img {
+	width: 18px;
+}
+
+.location {
+	font-size: 40px;
+	letter-spacing: 2.0px;
+}
+.fb-icon {
+	margin: 8px 8px;
+	padding: 0px 0 0 16px;
+	border-left: 1px solid #aaaaaa;
+}
+.fb-icon img {
+	width: 20px;
+}
+.address {
+	font-size: 19px;
+	text-transform: uppercase;
+}
+
+
+
+/* ------------------ Desktop Menu ------------------ */
+
+.desktop-menu {
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	display: flex;
+	justify-content: space-between;
+	padding: 0 94px;
+}
+
+.desktop-menu a {
+	margin: 0 4px;
+	padding: 12px 2px;
+	min-height: 28px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	font-size: 22px;
+	color: #bbb;
+}
+.desktop-menu a:hover {
+	color: #FFF;
+}
+.desktop-menu .menu-active {
+	color: #FFF;
+}
+
+.banner-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 12px 100px;
+	color: #000;
+	flex-grow: 1;
+}
+.banner-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+h3 {
+	font-size: 37px;
+	font-weight: 700;
+}
+h4 {
+	font-size: 34px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+.learn-more {
+	display: flex;
+	align-items: center;
+}
+.learn-more img {
+	margin-left: 14px;
+}
+
+/* ------------------ Mobile Menu ------------------ */
+
+.mobile-menu {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.mobile-menu label {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 24px;
+	height: 24px;
+}
+.mobile-menu label span {
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+}
+.mobile-nav {
+	position: absolute;
+	right: -200px;
+	top: 30px;
+}
+.mobile-menu input {
+	width: 0px;
+	height: 0px;
+}
+.mobile-menu input:checked + .mobile-nav {
+	right: 0px;
+	transition: right 0.4s ease-in-out;
+	animation-name: show-mobile-menu;
+	animation-duration: 0.4s;
+}
+
+@keyframes show-mobile-menu {
+	.mobile-nav {
+		right: 0px;
+	}
+}
+
+
+@media screen and (max-width: 1023px) {
+	.header-top,  .header-info {
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+	nav {
+		flex-wrap: wrap;
+		justify-content: center;
+		display: none;
+	}
+	.mobile-menu {
+		display: block;
+	}
+}
